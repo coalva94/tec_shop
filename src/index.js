@@ -1,4 +1,4 @@
-import express from 'express'
+import express from 'express';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
 import indexRouter from './routes/index.js';
@@ -11,7 +11,7 @@ app.set('views', join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(indexRouter);
 app.use('/images', express.static(path.join(__dirname, 'public/images')));
+app.use('/data', express.static(path.join(__dirname, 'public/data')));
+app.use('/js', express.static(path.join(__dirname, 'public/js'))); 
 
-app.listen(3000, () => {
-  console.log("Server is running on port", 3000);
-})
+app.listen(3000);
