@@ -4,7 +4,6 @@ async function loadProducts() {
       const respuesta = await fetch("/data/data.json");
       const data = await respuesta.json();
       const productos = data.productos;
-      console.log(productos);
       printProducts(productos);
     } catch (error) {
       console.error("Error fetching productos:", error);
