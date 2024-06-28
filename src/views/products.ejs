@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%- title %> </title></title>
+  <title><%- title %> </title>
+  <%- include('partials/head')%>
 </head>
 <body>
   <%- include('partials/navigation')%>
-  <h1>Products!</h1>
+  <div class="container mt-4">
+      <div id="productList">
+        <script src="/js/products.js"></script>
+      </div>
+  </div>
   <%- include('partials/footer')%>
-  
-
 </body>
 </html>

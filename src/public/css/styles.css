@@ -1,0 +1,13 @@
+.card-title {
+  height: 50px; /* Ajusta esta medida según tus necesidades */
+  overflow: hidden; /* Esto asegurará que el texto quepa dentro del tamaño fijo */
+  display: flex;
+  align-items: center; /* Centra verticalmente el texto */
+  justify-content: center; /* Centra horizontalmente el texto */
+}
+
+.row-cols-2 {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+}

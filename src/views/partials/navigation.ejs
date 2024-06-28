@@ -1,29 +1,29 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
   <div class="container" id="main-container">
   </div>
-  </div>
 </nav>
 
 <script>
   const options = [
     { "title": "HOME", "linkto": "/" },
+    { "title": "PRODUCTS", "linkto": "/products" },
     { "title": "SERVICES", "linkto": "/services" },
     { "title": "ABOUT", "linkto": "/about" }
   ];
 
 
-  
+
   function printNavbar(){
     const containerSelector=document.querySelector("#main-container")
     let template=`   <a class="navbar-brand me-2" href="#">
       <img
-        src="/images/logo-black.svg" 
+        src="/images/logo-black.svg"
         height="50"
         alt="Logo-black"
       />
     </a>
 
-  
+
     <button class="navbar-toggler collapsed" type="button"
       data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -35,7 +35,7 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
 
       <ul class="navbar-nav mb-2 mb-lg-0" id="Nav-options">
-       
+
       </ul>
 
       <div class="d-flex align-items-center">
@@ -44,17 +44,17 @@
         </button>
       </div>`
       containerSelector.innerHTML=template
-      prinOptions(options, "Nav-options")
+      printOptions(options, "Nav-options")
 
   }
 
 
-  function prinOptions(options, id) {
+  function printOptions(options, id) {
     const optionsPosition = document.querySelector(`#${id}`)
     let template = ``
     options.forEach(item => {
       template += ` <li class="nav-item me-4">
-          <a data-mdb-collapse-init class="nav-link" href=${item.linkto}>${item.title} </a>
+          <a class="nav-link" href=${item.linkto}>${item.title} </a>
         </li>`
 
     });
